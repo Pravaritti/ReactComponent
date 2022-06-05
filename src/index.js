@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDom from "react-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const App = () => {
+  return (
+    <div className="ui container comments">
+      <div className="comment">
+        <a href="/" className="avatar">
+          <img alt="avatar" />
+        </a>
+        <div className="content">
+          <a href="/" className="author">
+            Sam
+          </a>
+          <div className="metadata">
+            <span className="date">Today at 6:00PM</span>
+          </div>
+          <div className="text">Nice blog post!</div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDom.render(<App />, document.querySelector("#root"));
+
+//simple css files, elements for you to use. It will give us a little bit of default styling
